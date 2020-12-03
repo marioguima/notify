@@ -8,3 +8,5 @@ Using:
 <script src="/notify/notify.js"></script>
 ```
 
+Dependence:
+https://github.com/CodeSeven/toastr
