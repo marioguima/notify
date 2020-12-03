@@ -1,3 +1,13 @@
+var nMinSec;
+var nMaxSec;
+var sTextShow;
+
+function initNotify(pMinSec = 7, pMaxSec = 15, pTextShow = "Garantiu sua vaga agora!") {
+	nMinSec = pMinSec;
+	nMaxSec = pMaxSec;
+	sTextShow = pTextShow;
+}
+
 jQuery(document).ready(function() {
 
 	if(!jQuery('body').hasClass("elementor-editor-active")) {
@@ -34,10 +44,10 @@ jQuery(document).ready(function() {
 			var nName = Math.floor(Math.random() * names.length);
 			var name = names[nName];
 			names.splice(nName, 1);
-			toastr["success"]("Garantiu sua vaga agora!", name);
+			toastr["success"](sTextShow, name);
 			clearInterval(handleShowName);
 			if (names.length > 0) {
-				var interval = getRandomInt(5,10) * 1000;
+				var interval = getRandomInt(nMinSec,nMaxSec) * 1000;
 				handleShowName = setInterval(showName, interval);
 			}
 		}
