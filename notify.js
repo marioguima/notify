@@ -1,4 +1,5 @@
 jQuery(document).ready(function() {
+
 	if(!jQuery('body').hasClass("elementor-editor-active")) {
 		function getRandomInt(min, max) {
 			min = Math.ceil(min);
@@ -41,4 +42,5 @@ jQuery(document).ready(function() {
 			}
 		}
 	}
+
 });
